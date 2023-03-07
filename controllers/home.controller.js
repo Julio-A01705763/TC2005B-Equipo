@@ -1,7 +1,7 @@
 exports.inicio = (request, response, next) => {
-    response.render('inicio');
+    response.render('home/inicio');
 }
 
 exports.iniciar_sesion = (request,response,next) => {
-    response.render('iniciar_sesion');
+    response.render('home/iniciar_sesion');
 }

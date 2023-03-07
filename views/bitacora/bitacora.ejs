@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs'); %>
+<h1 class = "title is-1 is-centered"> Bienvenido a tu bitacora!</h1>
+
+<div class = "container">
+    <table class = "table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>¿Qué hiciste?</th>
+                <th>¿Cómo te sentiste?</th>
+                <th>Comentarios adicionales</th>
+            </tr>
+        </thead>
+        <tbody>
+
+<% if (registros.length > 0) { %>
+
+<% } %>
+<!--Fuente: https://datatables.net/examples/api/form.html-->
+            <tr>
+                <th>07/03/2023</th>
+                <td><input type = "text"></td>
+                <td><select value = "Escribe">
+                    <option>
+                        1
+                    </option>
+                    <option>
+                        2
+                    </option>
+                    <option>
+                        3
+                    </option>
+                </select></td>
+                <td><input type = "text"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<%- include('../includes/foot.ejs'); %>

@@ -1,7 +1,7 @@
 const Registro = require("../models/bitacora.model");
 
 exports.get_bitacora = (request, response, next) => {
-    response.render("bitacora", {registros: Registro.fetchAll()});
+    response.render("bitacora/bitacora", {registros: Registro.fetchAll()});
 }
 
 exports.post_bitacora = (request,response,next) => {

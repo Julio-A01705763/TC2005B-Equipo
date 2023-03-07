@@ -13,12 +13,12 @@ app.set('views', 'views');
 
 const rutasHome = require('./routes/home.routes');
 
-app.use('/home', rutasHome);
+app.use('/', rutasHome);
 
 
 const rutasBitacora = require('./routes/bitacora.routes');
 
-app.use('/', rutasBitacora);
+app.use('/home', rutasBitacora);
 
 app.use((request, response, next) => {
     console.log("Page not found!")
