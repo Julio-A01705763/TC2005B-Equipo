@@ -13,28 +13,56 @@
         </thead>
         <tbody>
 
-<% if (registros.length > 0) { %>
+        <% if (registros.length > 0) { %>
+                <% for (let registro of registros) { %>
+                    <tr> 
+                    <th> <%= registro.fecha %></th>
+                    <td> <%= registro.descr_sesion %></td>
+                    <td> <%= registro.nivel_satisf %></td>
+                    <td> <%= registro.comentarios %></td>
 
-<% } %>
-<!--Fuente: https://datatables.net/examples/api/form.html-->
+                    </tr>
+                <% } %>
+
+        <% } %>
+        <!--Fuente: https://datatables.net/examples/api/form.html-->
+        <% const today = new Date(); %>
+        <% const yyyy = today.getFullYear(); %>
+        <% let mm = today.getMonth() + 1; %>
+        <% let dd = today.getDay(); %>
+        <% if (dd < 10) dd = '0' + dd; %>
+        <% if (mm < 10) mm = '0' + mm; %>
+        <% const formattedToday = dd + '/' + mm + '/' + yyyy; %>
             <tr>
-                <th>07/03/2023</th>
-                <td><input type = "text"></td>
-                <td><select value = "Escribe">
-                    <option>
-                        1
-                    </option>
-                    <option>
-                        2
-                    </option>
-                    <option>
-                        3
-                    </option>
-                </select></td>
-                <td><input type = "text"></td>
+                <th> <%= formattedToday %></th>
+                <td><input type = "text" size = "50" class="input is-info is-small is-rounded"></td>
+                <td>
+                    <div class="select is-info is-small">
+                    <select value = "Escribe">
+                        <option>
+                            1
+                        </option>
+                        <option>
+                            2
+                        </option>
+                        <option>
+                            3
+                        </option>
+                        <option>
+                            4
+                        </option>
+                        <option>
+                            5
+                        </option>
+                    </select>
+                    </div>
+                </td>
+                <td><input type = "text" size = "50" class="input is-info is-small is-rounded"></td>
             </tr>
         </tbody>
     </table>
 </div>
+
+
 
 <%- include('../includes/foot.ejs'); %>
