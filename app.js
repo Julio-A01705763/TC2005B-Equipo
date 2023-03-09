@@ -27,9 +27,13 @@ const rutasRutinas = require('./routes/rutinas.routes');
 
 app.use('/rutinas', rutasRutinas);
 
-const rutasProgreso = require('./routes/progreso.routes')
+const rutasProgreso = require('./routes/progreso.routes');
 
 app.use('/progreso', rutasProgreso);
+
+const rutasMedidas = require('./routes/medidas.routes');
+
+app.use('/medidas', rutasMedidas);
 
 app.use((request, response, next) => {
     console.log("Page not found!")
