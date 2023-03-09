@@ -23,9 +23,9 @@ const rutasDieta = require('./routes/dietas.routes');
 
 app.use('/dietas', rutasDieta);
 
-const rutasRutina = require('./routes/rutinas.routes');
+const rutasRutinas = require('./routes/rutinas.routes');
 
-app.use('/rutinas', rutasRutina);
+app.use('/rutinas', rutasRutinas);
 
 app.use((request, response, next) => {
     console.log("Page not found!")

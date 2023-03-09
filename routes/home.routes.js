@@ -8,4 +8,6 @@ router.get('/', homeController.inicio);
 
 router.get('/iniciar-sesion', homeController.iniciar_sesion);
 
+router.get('/registrarse', homeController.registrarse);
+
 module.exports = router;

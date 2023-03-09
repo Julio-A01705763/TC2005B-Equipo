@@ -4,12 +4,13 @@
     <title>Pagina web navegable</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <style>
-      .navbar-item:hover, .navbar-link:hover{
+      .navbar-item:hover, .navbar-link:hover, .navbar-dropdown{
         background-color: rgb(20, 20, 20) !important;
         color:rgb(31, 93, 240)
       }
 
-      .navbar-item, .navbar-link{
+
+      .navbar-item, .navbar-link, .navbar-dropdown{
         color:rgb(216, 216, 216);
       }
 
@@ -69,31 +70,18 @@
 
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
-                Mi Progreso
-              </a>
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Historial
-                </a>
-                <a class="navbar-item">
-                  Gráficos
-                </a>
-              </div>
-            </div>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
                 Mediciones
               </a>
               <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Mis medidas
-                </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="/medidas">
                   Registrar medidas
                 </a>
               </div>
             </div>
+
+            <a class="navbar-item" href="/progreso">
+              Progreso
+            </a>
           </div>
       
           <div class="navbar-end">
