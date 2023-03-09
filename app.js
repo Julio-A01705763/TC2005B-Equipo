@@ -20,7 +20,12 @@ const rutasBitacora = require('./routes/bitacora.routes');
 app.use('/home', rutasBitacora);
 
 const rutasDieta = require('./routes/dietas.routes');
+
 app.use('/dietas', rutasDieta);
+
+const rutasRutina = require('./routes/rutinas.routes');
+
+app.use('/rutinas', rutasRutina);
 
 app.use((request, response, next) => {
     console.log("Page not found!")

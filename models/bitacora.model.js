@@ -1,7 +1,7 @@
 const registros= [
     {
         id: 1,
-        fecha: "06/03/2023",
+        fecha: "28/02/2023",
         nivel_satisf: 4,
         descr_sesion: "5x10 Lagartijas 3x5 Bench 50kg",
         comentarios: "Nada mal la rutina",
@@ -9,7 +9,7 @@ const registros= [
     },
     {
         id: 2,
-        fecha: "07/03/2023",
+        fecha: "01/03/2023",
         nivel_satisf: 1,
         descr_sesion: "1x1 Squat",
         comentarios: "Apenas en el primer ejercicio me lesione",
@@ -17,7 +17,7 @@ const registros= [
     },
     {
         id: 3,
-        fecha: "08/03/2023",
+        fecha: "02/03/2023",
         nivel_satisf: 5,
         descr_sesion: "3x10 Bicep Curl 100kg",
         comentarios: "No fue nada la lesion de ayer",
