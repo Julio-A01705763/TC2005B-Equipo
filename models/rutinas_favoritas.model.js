@@ -1,10 +1,10 @@
 const rutinas= [
     {
-        id: "2",
-        nombre: "Full Cardio",
-        tipo: "Perder peso",
-        descripcion: "Esta rutina va dirigida hacia las personas que quieran perder peso",
-        frecuencia: 5
+        id: "3",
+        nombre: "Más avanzados",
+        tipo: "Subir peso",
+        descripcion: "Esta rutina va dirigida hacia las personas que quieren icrementar su fuerza y que ya llevan tiempo entrenando",
+        frecuencia: 5,
     },
 ]
 

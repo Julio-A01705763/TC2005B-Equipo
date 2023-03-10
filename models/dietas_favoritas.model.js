@@ -1,10 +1,10 @@
 const dietas= [
     {
-        id: "3",
-        nombre: "Balanceada",
-        tipo_dieta: "Mantener peso",
-        id_macro: "MAC0103",
-        id_micro: "MIC0103"
+        id: "1",
+        nombre: "Pollo y Pescado",
+        tipo_dieta: "Subir de peso",
+        id_macro: "MAC0101",
+        id_micro: "MIC0101"
     }
 ]
 

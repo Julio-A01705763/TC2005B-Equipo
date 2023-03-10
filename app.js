@@ -35,6 +35,10 @@ const rutasMedidas = require('./routes/medidas.routes');
 
 app.use('/medidas', rutasMedidas);
 
+const rutasPerfil = require('./routes/perfil.routes');
+
+app.use('/perfil', rutasPerfil);
+
 app.use((request, response, next) => {
     console.log("Page not found!")
     response.status(404);
