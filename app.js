@@ -39,6 +39,10 @@ const rutasPerfil = require('./routes/perfil.routes');
 
 app.use('/perfil', rutasPerfil);
 
+const rutasAdmin = require('./routes/admin.routes');
+
+app.use('/admin', rutasAdmin);
+
 app.use((request, response, next) => {
     console.log("Page not found!")
     response.status(404);
