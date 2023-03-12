@@ -95,7 +95,7 @@ INSERT INTO Ejercicio VALUES
 (17,'Remo invertido','link bonito'),
 (18,'Apertura de pecho','link bonito'),
 (19,'Cristos','link bonito'),
-(20,'Cruce de Polea','link bonito'),
+(20,'Cruce de Polea','link bonito');
 
 -- --------------------------------------------------------
 
@@ -191,10 +191,10 @@ INSERT INTO MicroNutrientes VALUES
 (7,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22),
 (8,34.2,43.7,34.6,3.5,34.5,3.4,443.5,4,NULL,NULL,34,NULL,234,NULL,234.4,424.5,NULL,53.2,98.3,20,21,22),
 (9,NULL,345.2,NULL,9.4,10.4,54.3,76.7,23.5,65.4,90.4,3.2,4.4,6.6,7.7,8.8,9.9,21.4,67.7,45.7,23.4,56.7,45),
-(10,9.3,23.5,345.4,332.5,366.3,36.9,43,54.2,43.6,347.8,34,65.8,346,45.3,656.3,545.3,45.5,43,75.9,45.3,2.1,54.9);
-(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-(11, NULL, NULL, NULL, 2345, 7983, NULL, 6373, NULL, NULL, 7838.2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 34.2, NULL);
-(12, 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3)
+(10,9.3,23.5,345.4,332.5,366.3,36.9,43,54.2,43.6,347.8,34,65.8,346,45.3,656.3,545.3,45.5,43,75.9,45.3,2.1,54.9),
+(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, NULL, NULL, NULL, 2345, 7983, NULL, 6373, NULL, NULL, 7838.2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 34.2, NULL),
+(12, 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3);
 -- --------------------------------------------------------
 
 --
@@ -213,7 +213,7 @@ INSERT INTO NivelFisico VALUES
 (1,'Noob','Hace menos de 12 repeticiones,no sabe técnica'),
 (2,'Beginner','Ya realiza 12 repeticiones'),
 (3,'Intermediate','Realiza 12 repeticiones con pesos fuertes,buena técnica'),
-(4,'Advanced','Pesos pesados con buena técnica')
+(4,'Advanced','Pesos pesados con buena técnica');
 
 -- --------------------------------------------------------
 
@@ -270,7 +270,13 @@ INSERT INTO Rutina VALUES
 (1,'pecho_explosivo','pecho','Realizar un fuerte entrenamiento de pecho'),
 (2,'Pierna_tonifcar','Pierna','realizar un leve entrenamiento'),
 (3,'Bicep_cara','bicep','Realizar entrenamiento de fuerza con mancuernas');
-
+(4,'Pecho Alto','Pecho','Realizar entrenamiento de fuerza con barra');
+(5,'Pecho Medio','Pecho','Realizar entrenamiento de progresión');
+(6,'Pecho Bajo','Pecho','Realizar entrenamiento de fuerza con poleas');
+(7,'Tricep y Bicep','Tricep-bicep','Realizar entrenamiento de fuerza con mancuernas');
+(8,'Espalda y hombro','Espalda','Realizar entrenamiento de fuerza con mancuernas');
+(9,'Pecho y hombro','P y H','Aumento de fuerza');
+(10,'Espalda Baja','Espalda','Tonificar musculos bajos');
 
 -- --------------------------------------------------------
 
@@ -292,7 +298,7 @@ CREATE TABLE Usuario (
   PRIMARY KEY(id_usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
-INSERT INTO Usuario 
+INSERT INTO Usuario VALUES
 (1,'José','Pérez','josperez','jose01@gmail.com','jose013',NULL, 'M','2003-02-01'),
 (2,'Mariana','González','mariangoz','marigonz@gmail.com','coutmariti01',NULL,'F','2001-04-'),
 (3,'Nashun','Wang','nwang','nashunwaang@gmail.com','extrañojapon',NULL,'M','1998-12-31'),
@@ -304,15 +310,15 @@ INSERT INTO Usuario
 (9,'Lucas','Rodriguez','roddlucc','rognw012@gmail.com','p9XhKd$r',NULL,'M','1988/07/14'),
 (10,'Ana','Perez','anappperez','ezanap@gmail.com','E#7LjFt*',NULL,'F','2001/11/03'),
 (11,'Daniel','Ramirez','ramdan','ledanfer@gmail.com','b4NkM@5x',NULL,'M','1993/02/28'),
-(12,''),
-(13,''),
-(14,''),
-(15,''),
-(16,''),
-(17,''),
-(18,''),
-(19,''),
-(20,''),
+(12,'Valeria','Torres','valeria_torres','valeria.torres@example.com','T2y@5DgH',NULL,'F','1990/09/05'),
+(13,'Juan','Hernandez','juan_hernandez','juan.hernandez@example.com','Rf@8GtS2',NULL,'M','2003/06/17'),
+(14,'Isabella','Gonzalez','isabella_gonzalez','isabella.gonzalez@example.com','q6Wx#7sK',NULL,'F','1998/04/23'),
+(15,'Andres','Castro','andres_castro','andres.castro@example.com','P#3vH8dZ',NULL,'M','1996/01/30'),
+(16,'Camila','Sanchez','camila_sanchez','camila.sanchez@example.com','A5z*9tRq',NULL,'F','1989/05/08'),
+(17,'Leonardo','Lopez','leonardo_lopez','leonardo.lopez@example.com','V8b#4mFp',NULL,'M','2000/10/22'),
+(18,'Carla','Martinez','carla_martinez','carla.martinez@example.com','S@1dN6tJ',NULL,'F','1998/04/23'),
+(19,'Tomas','Diaz','tomas_diaz','tomas.diaz@example.com','V8b#4mFp',NULL,'M','2000/10/22'),
+(20,'Lucia','Ortiz','lucia_ortiz','lucia.ortiz@example.com','G#9nH4jK',NULL,'F','1997/09/11');
 
 -- --------------------------------------------------------
 
@@ -322,20 +328,33 @@ INSERT INTO Usuario
 
 CREATE TABLE Dieta (
   id_dieta int(11) NOT NULL AUTO_INCREMENT,
+  nombre varchar(25) NOT NULL,
+  tipo_dieta varchar(15) NOT NULL,
 
   id_macro int(11) NOT NULL AUTO_INCREMENT,
   id_micro int(11) NOT NULL AUTO_INCREMENT,
 
   -- ----------------------------------- 
 
-  nombre varchar(25) NOT NULL,
-  tipo_dieta varchar(15) NOT NULL,
 
   PRIMARY KEY(id_dieta),
 
   FOREIGN KEY(id_macro) REFERENCES MacroNutrientes(id_macro),
   FOREIGN KEY(id_micro) REFERENCES MicroNutrientes(id_micro)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+INSERT INTO Dieta VALUES
+(1,'Rico pollo','Aumento peso',1,1),
+(2,'Pollo','Mantner peso',6,3),
+(3,'Ensalada Cesar','Bajar peso',3,10),
+(4,'Pescado','Mantener',4,12),
+(5,'Dieta detox','Ganar masa',5,8),
+(6,'Dieta Hipercalórica','Bajar peso',7,11),
+(7,'Dieta hipocalórica','Subir peso',2,2),
+(8,'Dieta Proteica','Ganar musculo',5,5),
+(9,'Equelibrada','Mantener peso',2,7),
+(10,'Dieta de Volumen','Aumentar peso',5,8);
+
 
 -- --------------------------------------------------------
 
@@ -362,6 +381,28 @@ CREATE TABLE Cliente (
   FOREIGN KEY(id_obj) REFERENCES Objetivo(id_obj),
   FOREIGN KEY(id_niv) REFERENCES NivelFisico(id_niv),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+INSERT INTO Cliente VALUES
+(1,8,5,3,1),
+(2,3,8,2,3),
+(3,7,6,1,4),
+(4,5,3,2,2),
+(5,9,4,2,2),
+(6,10,9,1,3),
+(7,5,1,2,1),
+(8,8,7,3,1),
+(9,7,10,2,3),
+(10,9,6,2,4),
+(11,8,7,2,3),
+(12,2,1,2,1),
+(13,1,9,2,3),
+(14,2,2,2,2),
+(15,10,10,3,4),
+(16,5,5,3,1),
+(17,7,6,2,1),
+(18,4,5,3,4),
+(19,10,5,3,3),
+(20,9,6,2,4);
 
 -- --------------------------------------------------------
 
@@ -405,6 +446,19 @@ CREATE TABLE DietasAlimentos (
   FOREIGN KEY(id_alimento) REFERENCES Alimento(id_alimento),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
+INSERT INTO DietasAlimentos VALUES
+(1,3,4.1),
+(2,10,3),
+(3,4,2.1),
+(4,2,50000),
+(5,9,60),
+(6,3,5),
+(7,20,200),
+(8,5,30),
+(9,6,3),
+(10,9,4),
+
+
 -- --------------------------------------------------------
 
 --
@@ -420,6 +474,19 @@ CREATE TABLE DietasFavoritas (
   FOREIGN KEY(id_cliente) REFERENCES Cliente(id_cliente),
   FOREIGN KEY(id_dieta) REFERENCES Dieta(id_dieta)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+INSERT INTO DietasFavoritas VALUES
+(1,3,),
+(2,10),
+(3,4),
+(4,2),
+(5,9),
+(6,3),
+(7,20),
+(8,5)
+(9,6),
+(10,9);
+
 
 -- --------------------------------------------------------
 
@@ -442,6 +509,18 @@ CREATE TABLE RutinaEjercicio (
   FOREIGN key(id_ejercicio)REFERENCES Ejercicio(id_ejercicio),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
+INSERT INTO RutinaEjercicio VALUES
+(1,3,5,12,'LUN'),
+(2,10,2,10,'JUE'),
+(3,4,5,15,'VIE'),
+(4,2,1,20,'SAB'),
+(5,9,5,2,'MAR'),
+(6,3,6,5,'MIE'),
+(7,20,18,3,'SAB'),
+(8,5,5,8,'VIE')
+(9,6,5,9,'LUN'),
+(10,9,10,12,'MAR');
+
 
 -- --------------------------------------------------------
 
@@ -450,14 +529,36 @@ CREATE TABLE RutinaEjercicio (
 --
 
 CREATE TABLE RutinasFavoritas (
-  id_ciente int(11) NOT NULL AUTO_INCREMENT,
+  id_cLiente int(11) NOT NULL AUTO_INCREMENT,
   id_rutina int(11) NOT NULL AUTO_INCREMENT,
 
-  PRIMARY KEY(id_ciente,id_rutina),
+  PRIMARY KEY(id_cLiente,id_rutina),
 
-  FOREIGN KEY(id_ciente) REFERENCES Cliente(id_cliente),
+  FOREIGN KEY(id_cLiente) REFERENCES Cliente(id_cliente),
   FOREIGN KEY(id_rutina) REFERENCES Rutina(id_rutina)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+INSERT INTO RutinasFavoritas VALUES
+(1,8),
+(2,3),
+(3,4),
+(4,2),
+(5,2),
+(6,10),
+(7,5),
+(8,8),
+(9,7),
+(10,9),
+(11,8),
+(12,5),
+(13,1),
+(14,2),
+(15,10),
+(16,5),
+(17,7),
+(18,4),
+(19,10),
+(20,6);
 
 -- --------------------------------------------------------
 
@@ -474,6 +575,27 @@ CREATE TABLE UsuarioRol (
   FOREIGN key(id_rol)REFERENCES Rol(id_rol)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
+INSERT INTO UsuarioRol VALUES
+(1,1),
+(2,2),
+(3,2),
+(4,1),
+(5,1),
+(6,1),
+(7,1),
+(8,1),
+(9,2),
+(10,2),
+(11,1),
+(12,2),
+(13,2),
+(14,2),
+(15,1),
+(16,1),
+(17,1),
+(18,1),
+(19,1),
+(20,2);
 -- --------------------------------------------------------
 
 --
@@ -493,5 +615,7 @@ CREATE TABLE ClienteMedicion (
   FOREIGN key(id_cliente)REFERENCES Cliente(id_cliente),
   FOREIGN key(id_rol)REFERENCES Rol(id_rol)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+
 
 -- --------------------------------------------------------
