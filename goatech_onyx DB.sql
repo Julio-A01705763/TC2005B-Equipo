@@ -61,7 +61,6 @@ INSERT INTO Alimento VALUES
 (29,'Aceite','Cucharada'),
 (30,'Tostadas','Pieza');
 
-
 -- --------------------------------------------------------
 
 --
@@ -83,7 +82,20 @@ INSERT INTO Ejercicio VALUES
 (4,'Remo','link bonito'),
 (5,'Plancha','link bonito'),
 (6,'Sentadillas','link bonito'),
-(7,'Dominadas','link bonito');
+(7,'Dominadas','link bonito'),
+(8,'Press de pecho','link bonito'),
+(9,'Martillos','link bonito'),
+(10,'Elevaciones de piernas','link bonito'),
+(11,'Caminadora','link bonito'),
+(12,'Bicicleta de piso','link bonito'),
+(13,'Extension de tricep','link bonito'),
+(14,'Fondos','link bonito'),
+(15,'Press Militar','link bonito'),
+(16,'Peso Muerto','link bonito'),
+(17,'Remo invertido','link bonito'),
+(18,'Apertura de pecho','link bonito'),
+(19,'Cristos','link bonito'),
+(20,'Cruce de Polea','link bonito'),
 
 -- --------------------------------------------------------
 
