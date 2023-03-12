@@ -36,7 +36,31 @@ INSERT INTO Alimento VALUES
 (4,'Pollo', 'Gramo'),
 (5,'Huevo', 'Pieza'),
 (6,'Entomatadas', 'Pieza'),
-(7,'Chuleta', 'Gramo');
+(7,'Chuleta', 'Gramo'),
+(8,'Tomates','Rebanada'),
+(9,'Lechuga','Gramo'),
+(10,'Pan Tostado','Rebanada'),
+(11,'Carne de res','Gramo'),
+(12,'Carne de Puerco','Gramo'),
+(13,'Jamón','Gramo'),
+(14,'Platano','Pieza'),
+(15,'Pan dulce','Pieza'),
+(16,'Azucar','Cucharada'),
+(17,'Sal','Cucharada'),
+(18,'Crema de maní','Cucharada'),
+(19,'Almendras','Gramo'),
+(20,'Queso','Gramo'),
+(21,'Claras de Huevo','Pieza'),
+(22,'Frijoles','Gramo'),
+(23,'Tortillas','Pieza'),
+(24,'Aguacate','Pieza'),
+(25,'Uvas','Pieza'),
+(26,'Naranjas','Pieza'),
+(27,'Agua','Mililitros'),
+(28,'Pasta','Gramo')
+(29,'Aceite','Cucharada'),
+(30,'Tostadas','Pieza');
+
 
 -- --------------------------------------------------------
 
