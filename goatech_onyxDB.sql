@@ -458,7 +458,7 @@ CREATE TABLE DietasAlimentos ( -- Actualmente hay 36 alimentos y 10 dietas
 
   PRIMARY KEY(id_dieta,id_alimento),
   FOREIGN KEY(id_dieta) REFERENCES Dieta(id_dieta),
-  FOREIGN KEY(id_alimento) REFERENCES Alimento(id_alimento),
+  FOREIGN KEY(id_alimento) REFERENCES Alimento(id_alimento)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO DietasAlimentos VALUES
@@ -477,16 +477,15 @@ INSERT INTO DietasAlimentos VALUES
 
 (3,4,2.1),
 (3,1,534.3),
-(3,11,432.3),
+(3,11,43.3),
 (3,34,234.22),
 (3,22,2323.3),
 
-(4,2,50000),
+(4,2,5000.1),
 (4,20,534.6),
 (4,32,545.3),
 (4,25,654.23),
 (4,33,452.4),
-(4,14,653.3),
 
 (5,9,234.2),
 (5,2,234),
@@ -524,6 +523,7 @@ INSERT INTO DietasAlimentos VALUES
 (10,28,534.24),
 (10,10,242.2),
 (10,3,23.2);
+-- Nota mental, sólo se pueden utilizar 4 dígitos para la parte de cantidades enteras
 
 -- --------------------------------------------------------
 
@@ -542,13 +542,13 @@ CREATE TABLE DietasFavoritas ( -- Existen por el momento 10 dietas y 20 clientes
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO DietasFavoritas VALUES
-(1,3,),
+(1,3),
 (2,10),
 (3,4),
 (4,2),
 (5,9),
 (6,3),
-(7,20),
+(7,10),
 (8,5),
 (9,6),
 (10,9);
@@ -572,7 +572,7 @@ CREATE TABLE RutinaEjercicio ( -- Existen 10 rutinas y 20 ejercicios
   PRIMARY KEY(id_rutina,id_ejercicio),
 
   FOREIGN KEY(id_rutina) REFERENCES Rutina(id_rutina),
-  FOREIGN key(id_ejercicio)REFERENCES Ejercicio(id_ejercicio),
+  FOREIGN key(id_ejercicio)REFERENCES Ejercicio(id_ejercicio)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO RutinaEjercicio VALUES
@@ -581,7 +581,6 @@ INSERT INTO RutinaEjercicio VALUES
 (1,2,3,10,'LUN'),
 (1,5,1,15,'LUN'),
 (1,7,2,15,'LUN'),
-(1,2,2,10,'LUN'),
 
 (2,10,2,10,'JUE'),
 (2,5,1,10,'JUE'),
@@ -606,15 +605,15 @@ INSERT INTO RutinaEjercicio VALUES
 (7,13,4,10,'SAB'),
 (7,15,2,15,'SAB'),
 
-(8,5,5,8,'VIE')
-(8,2,2,10,'VIE')
-(8,4,1,10,'VIE')
+(8,5,5,8,'VIE'),
+(8,2,2,10,'VIE'),
+(8,4,1,10,'VIE'),
 
 (9,6,5,9,'LUN'),
 (9,3,3,10,'LUN'),
 
-(10,9,10,5,'MAR');
-(10,2,2,12,'MAR');
+(10,9,10,5,'MAR'),
+(10,2,2,12,'MAR'),
 (10,5,5,8,'MAR');
 
 
