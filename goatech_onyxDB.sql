@@ -310,20 +310,21 @@ CREATE TABLE Usuario (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO Usuario VALUES
+INSERT INTO Usuario VALUES
 (1,'José','Pérez','josperez','jose01@gmail.com','jose013',NULL, 'M','2003/02/01'),
 (2,'Mariana','González','mariangoz','marigonz@gmail.com','coutmariti01',NULL,'F','2001/04/02'),
 (3,'Nashun','Wang','nwang','nashunwaang@gmail.com','extrañojapon',NULL,'M','1998/12/31'),
 (4,'Mariano','Vega','marianoovega','vegamariiano@gmail.com','hogema01_',NULL,'M','1994/03/22'),
 (5,'Vanessa','Lanz','enav_152003','enavlanz_01@gmail.com','unicorniofeliz',NULL,'F','2003/09/15'),
 (6,'Héctor','Torres','hector.t24','hectortorres@gmail.com','torresgemelas',NULL,'M','2000/04/24'),
-(7,'Uri','Gopar','uri_gopar','urigopar@gmail.com','gatitosarcoiris01',NULL,'M','1995/03/21'),
+(7,'Uri','Gopar','uri_gopar','urigopar@gmail.com','gatitosarcoir01',NULL,'M','1995/03/21'),
 (8,'Sofia','Garcia','sofiii_garcia','sofgarciia22@gmail.com','Cg#1fQm*',NULL,'F','1993/03/21'),
 (9,'Lucas','Rodriguez','roddlucc','rognw012@gmail.com','p9XhKd$r',NULL,'M','1988/07/14'),
 (10,'Ana','Perez','anappperez','ezanap@gmail.com','E#7LjFt*',NULL,'F','2001/11/03'),
 (11,'Daniel','Ramirez','ramdan','ledanfer@gmail.com','b4NkM@5x',NULL,'M','1993/02/28'),
 (12,'Valeria','Torres','valeria_torres','valeria.torres@example.com','T2y@5DgH',NULL,'F','1990/09/05'),
 (13,'Juan','Hernandez','juan_hernandez','juan.hernandez@example.com','Rf@8GtS2',NULL,'M','2003/06/17'),
-(14,'Isabella','Gonzalez','isabella_gonzalez','isabella.gonzalez@example.com','q6Wx#7sK',NULL,'F','1998/04/23'),
+(14,'Isabella','Gonzalez','isabella_glez','isabella.gonzalez@example.com','q6Wx#7sK',NULL,'F','1998/04/23'),
 (15,'Andres','Castro','andres_castro','andres.castro@example.com','P#3vH8dZ',NULL,'M','1996/01/30'),
 (16,'Camila','Sanchez','camila_sanchez','camila.sanchez@example.com','A5z*9tRq',NULL,'F','1989/05/08'),
 (17,'Leonardo','Lopez','leonardo_lopez','leonardo.lopez@example.com','V8b#4mFp',NULL,'M','2000/10/22'),
@@ -341,8 +342,8 @@ CREATE TABLE Dieta ( -- No se tienen más tipos de dietas
   nombre varchar(25) NOT NULL,
   tipo_dieta varchar(15) NOT NULL,
 
-  id_macro int(11) NOT NULL AUTO_INCREMENT,
-  id_micro int(11) NOT NULL AUTO_INCREMENT,
+  id_macro int(11) NOT NULL,
+  id_micro int(11) NOT NULL,
 
   -- ----------------------------------- 
 
@@ -375,10 +376,10 @@ INSERT INTO Dieta VALUES
 CREATE TABLE Cliente (
   id_cliente int(11) NOT NULL AUTO_INCREMENT,
 
-  id_rutina int(11) NOT NULL AUTO_INCREMENT,
-  id_dieta int(11) NOT NULL AUTO_INCREMENT,
-  id_obj int(11) NOT NULL AUTO_INCREMENT,
-  id_niv int(11) NOT NULL AUTO_INCREMENT,
+  id_rutina int(11) NOT NULL,
+  id_dieta int(11) NOT NULL,
+  id_obj int(11) NOT NULL,
+  id_niv int(11) NOT NULL,
 
   -- ----------------------------------- 
 
@@ -389,7 +390,7 @@ CREATE TABLE Cliente (
   FOREIGN KEY(id_rutina) REFERENCES Rutina(id_rutina),
   FOREIGN KEY(id_dieta) REFERENCES Dieta(id_dieta),
   FOREIGN KEY(id_obj) REFERENCES Objetivo(id_obj),
-  FOREIGN KEY(id_niv) REFERENCES NivelFisico(id_niv),
+  FOREIGN KEY(id_niv) REFERENCES NivelFisico(id_niv)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO Cliente VALUES
@@ -414,6 +415,7 @@ INSERT INTO Cliente VALUES
 (19,10,5,3,3,NULL),
 (20,9,6,2,4,NULL);
 
+-- Hasta cliente va todo bien
 -- --------------------------------------------------------
 
 --
@@ -422,7 +424,7 @@ INSERT INTO Cliente VALUES
 
 CREATE TABLE Bitacora ( -- Por ahora existen 20 clientes y 10 rutinas 
   id_cliente int(11) NOT NULL,
-  id_rutina int(11) NOT NULL AUTO_INCREMENT,
+  id_rutina int(11) NOT NULL,
 
   -- -----------------------------------
 
