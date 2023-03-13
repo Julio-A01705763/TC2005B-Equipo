@@ -435,13 +435,24 @@ CREATE TABLE Bitacora ( -- Por ahora existen 20 clientes y 10 rutinas
 
   PRIMARY KEY(id_cliente,id_rutina,fecha),
 
-  FOREIGN KEY(id_cliente) REFERENCES Cliente(id_cliente)
+  FOREIGN KEY(id_cliente) REFERENCES Cliente(id_cliente),
   FOREIGN KEY(id_rutina) REFERENCES Rutina(id_rutina)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
-INSERT INTO Bitacora VALUES --Formato de fecha en 'YYYY/MM/DD'
+--Formato de fecha en 'YYYY/MM/DD'
+INSERT INTO Bitacora VALUES 
 (1,1,'2023/02/13',5,'10 lagartijas con 5 press','Hoy me sentí súper, pude hacer todos los ejercicios de manera increíble, me sentí muy motivado.'),
--- Falta por hacer
+(1,4, '2023/02/01',4, 'Leg press 8 x 100kg Squats 10 x  65kg 100 sentadillas', 'Me fue muy bien pero me asusto el wey que cargo 300kg de sentadilla al lado mio'),
+(2, 3, '2023/02/02' , 5, 'Bench press 3x38kg, peso muerto 8x100kg' , 'Comi mucha pasta y me hizo sentir mal durante el entrenamiento' ),
+(3, 8, '2023/01/14' , 2, '15 kilómetros en la maquina de correr', 'Por poco me desmayo en los últimos kilometros y vomite en el baño, todo valdrá la pena cuando baje de peso'),
+(4, 1, '2023/03/22' , 5, '100 lagartijas, 100 sentadillas, 10 kilometros ', 'Me sentí muy bien, como mi personaje favorito'),
+(5, 2, '2023/01/12' , 2, '2000 metros en la piscina', 'Me debe poner protector solar porque se me había quedado la espalda bien roja por nadar en el sol'),
+(6, 5, '2023/01/03' , 4, '10x80kg sentadillas, 10 minutos corriendo en la caminadora.', 'Me duelen demasiado las piernas pero se sintió bien.'),
+(7, 6, '2022/11/18' , 2, 'Una hora de clases de Zumba, 10 minutos en la caminadora', 'La instructora fue muy agresiva conmigo cuando yo solo quería disfrutar de mi ejercicio.'),
+(8, 9, '2023/05/05' , 5, 'chest flies 10x20kg, dumbbell press 12x 22kg, shoulder raises 12x15kg', NULL),
+(9, 10, '2023/08/25' , NULL, '25x200kg peso puerto', NULL),
+(10, 7, '2010/08/14' , 2, '15 kilómetros en la maquina de correr', 'Por poco me desmayo en los últimos kilometros y vomite en el baño, todo valdrá la pena cuando baje de peso');
+
 -- --------------------------------------------------------
 
 --
@@ -715,5 +726,5 @@ CREATE TABLE ClienteMedicion ( -- Por el momento tenemos 20 clientes y 10 medici
 INSERT INTO ClienteMedicion VALUES --Formato de fecha en 'YYYY/MM/DD'
 (1,5,'2023/01/23',13.3),
 (2,4,'2023/01/23',23.4),
-
+-- Por el momento, falta
 -- --------------------------------------------------------
