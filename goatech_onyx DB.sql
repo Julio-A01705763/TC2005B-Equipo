@@ -439,8 +439,8 @@ CREATE TABLE Bitacora ( -- Por ahora existen 20 clientes y 10 rutinas
   FOREIGN KEY(id_rutina) REFERENCES Rutina(id_rutina)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
-INSERT INTO Bitacora VALUES --Formato de fecha en "YYYY/MM/DD"
-(1,1,"2023/02/13",),
+INSERT INTO Bitacora VALUES --Formato de fecha en 'YYYY/MM/DD'
+(1,1,'2023/02/13',5,'10 lagartijas con 5 press','Hoy me sentí súper, pude hacer todos los ejercicios de manera increíble, me sentí muy motivado.'),
 
 -- --------------------------------------------------------
 
@@ -549,7 +549,7 @@ INSERT INTO DietasFavoritas VALUES
 (5,9),
 (6,3),
 (7,20),
-(8,5)
+(8,5),
 (9,6),
 (10,9);
 
@@ -707,12 +707,14 @@ CREATE TABLE ClienteMedicion ( -- Por el momento tenemos 20 clientes y 10 medici
   fecha date NOT NULL,
   medida float(4,1) DEFAULT NULL,
 
-  PRIMARY KEY(id_cliente,id_medicion),
+  PRIMARY KEY(id_cliente,id_medicion,fecha),
 
   FOREIGN key(id_cliente)REFERENCES Cliente(id_cliente),
   FOREIGN key(id_medicion)REFERENCES Medicion(id_medicion)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
-
+INSERT INTO ClienteMedicion VALUES --Formato de fecha en 'YYYY/MM/DD'
+(1,5,'2023/01/23',13.3),
+(2,4,'2023/01/23',23.4),
 
 -- --------------------------------------------------------
