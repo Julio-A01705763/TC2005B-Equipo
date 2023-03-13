@@ -666,7 +666,7 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `nombre_usuario`, `co
 --
 
 CREATE TABLE `usuariorol` (
-  `id_cliente` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `id_rol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
@@ -674,7 +674,7 @@ CREATE TABLE `usuariorol` (
 -- Dumping data for table `usuariorol`
 --
 
-INSERT INTO `usuariorol` (`id_cliente`, `id_rol`) VALUES
+INSERT INTO `usuariorol` (`id_usuario`, `id_rol`) VALUES
 (1, 1),
 (2, 2),
 (3, 2),
@@ -830,8 +830,8 @@ ALTER TABLE `usuario`
 -- Indexes for table `usuariorol`
 --
 ALTER TABLE `usuariorol`
-  ADD PRIMARY KEY (`id_cliente`,`id_rol`),
-  ADD UNIQUE KEY `id_cliente` (`id_cliente`),
+  ADD PRIMARY KEY (`id_usuario`,`id_rol`),
+  ADD UNIQUE KEY `id_usuario` (`id_usuario`),
   ADD KEY `id_rol` (`id_rol`);
 
 --
@@ -976,7 +976,7 @@ ALTER TABLE `rutinasfavoritas`
 -- Constraints for table `usuariorol`
 --
 ALTER TABLE `usuariorol`
-  ADD CONSTRAINT `usuariorol_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`),
+  ADD CONSTRAINT `usuariorol_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `cliente` (`id_usuario`),
   ADD CONSTRAINT `usuariorol_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`);
 COMMIT;
 
