@@ -441,7 +441,7 @@ CREATE TABLE Bitacora ( -- Por ahora existen 20 clientes y 10 rutinas
 
 INSERT INTO Bitacora VALUES --Formato de fecha en 'YYYY/MM/DD'
 (1,1,'2023/02/13',5,'10 lagartijas con 5 press','Hoy me sentí súper, pude hacer todos los ejercicios de manera increíble, me sentí muy motivado.'),
-
+-- Falta por hacer
 -- --------------------------------------------------------
 
 --
@@ -449,8 +449,8 @@ INSERT INTO Bitacora VALUES --Formato de fecha en 'YYYY/MM/DD'
 --
 
 CREATE TABLE DietasAlimentos ( -- Actualmente hay 36 alimentos y 10 dietas
-  id_dieta int(11) NOT NULL AUTO_INCREMENT,
-  id_alimento int(11) NOT NULL AUTO_INCREMENT,
+  id_dieta int(11) NOT NULL,
+  id_alimento int(11) NOT NULL,
 
   -- -----------------------------------
 
@@ -532,8 +532,8 @@ INSERT INTO DietasAlimentos VALUES
 --
 
 CREATE TABLE DietasFavoritas ( -- Existen por el momento 10 dietas y 20 clientes
-  id_cliente int(11) NOT NULL AUTO_INCREMENT,
-  id_dieta int(11) NOT NULL AUTO_INCREMENT,
+  id_cliente int(11) NOT NULL,
+  id_dieta int(11) NOT NULL,
 
   PRIMARY KEY(id_cliente,id_dieta),
 
@@ -561,8 +561,8 @@ INSERT INTO DietasFavoritas VALUES
 --
 
 CREATE TABLE RutinaEjercicio ( -- Existen 10 rutinas y 20 ejercicios
-  id_rutina int(11) NOT NULL AUTO_INCREMENT,
-  id_ejercicio int(11) NOT NULL AUTO_INCREMENT,
+  id_rutina int(11) NOT NULL,
+  id_ejercicio int(11) NOT NULL,
   -- -----------------------------------
 
   series int(3) NOT NULL,
@@ -625,8 +625,8 @@ INSERT INTO RutinaEjercicio VALUES
 --
 
 CREATE TABLE RutinasFavoritas ( -- Existen por el momento 20 clientes y 10 rutinas
-  id_cLiente int(11) NOT NULL AUTO_INCREMENT,
-  id_rutina int(11) NOT NULL AUTO_INCREMENT,
+  id_cLiente int(11) NOT NULL,
+  id_rutina int(11) NOT NULL,
 
   PRIMARY KEY(id_cLiente,id_rutina),
 
@@ -663,8 +663,8 @@ INSERT INTO RutinasFavoritas VALUES
 --
 
 CREATE TABLE UsuarioRol ( -- No se pueden hacer más registros puesto que sólo hay 20 clientes y dos roles
-  id_cliente int(11) NOT NULL AUTO_INCREMENT,
-  id_rol int(11) NOT NULL AUTO_INCREMENT,
+  id_cliente int(11) NOT NULL,
+  id_rol int(11) NOT NULL,
 
   PRIMARY KEY(id_cliente,id_rol),
 
@@ -700,8 +700,8 @@ INSERT INTO UsuarioRol VALUES
 --
 
 CREATE TABLE ClienteMedicion ( -- Por el momento tenemos 20 clientes y 10 mediciones
-  id_cliente int(11) NOT NULL AUTO_INCREMENT,
-  id_medicion int(11) NOT NULL AUTO_INCREMENT,
+  id_cliente int(11) NOT NULL,
+  id_medicion int(11) NOT NULL,
   -- -----------------------------------
 
   fecha date NOT NULL,
