@@ -62,12 +62,12 @@ INSERT INTO Alimento VALUES
 (31,'Leche de vaca','Mililitros'),
 (32,'Leche de soya','Mililitros'),
 (33,'Leche de como','Mililitros'),
-(31,'Jugo de naranja','Mililitros'),
-(32,'Jugo verde','Mililitros'),
-(33,'Jugo de toronja','Mililitros'),
-(34,'Toronja','Pieza'),
-(35,'Aceite de oliva','Cucharada'),
-(36,'Avena','Taza');
+(34,'Jugo de naranja','Mililitros'),
+(35,'Jugo verde','Mililitros'),
+(36,'Jugo de toronja','Mililitros'),
+(37,'Toronja','Pieza'),
+(38,'Aceite de oliva','Cucharada'),
+(39,'Avena','Taza');
 
 -- --------------------------------------------------------
 
@@ -280,13 +280,13 @@ CREATE TABLE Rutina ( -- Información cambiante
 INSERT INTO Rutina VALUES
 (1,'pecho_explosivo','pecho','Realizar un fuerte entrenamiento de pecho'),
 (2,'Pierna_tonifcar','Pierna','realizar un leve entrenamiento'),
-(3,'Bicep_cara','bicep','Realizar entrenamiento de fuerza con mancuernas');
-(4,'Pecho Alto','Pecho','Realizar entrenamiento de fuerza con barra');
-(5,'Pecho Medio','Pecho','Realizar entrenamiento de progresión');
-(6,'Pecho Bajo','Pecho','Realizar entrenamiento de fuerza con poleas');
-(7,'Tricep y Bicep','Tricep-bicep','Realizar entrenamiento de fuerza con mancuernas');
-(8,'Espalda y hombro','Espalda','Realizar entrenamiento de fuerza con mancuernas');
-(9,'Pecho y hombro','P y H','Aumento de fuerza');
+(3,'Bicep_cara','bicep','Realizar entrenamiento de fuerza con mancuernas'),
+(4,'Pecho Alto','Pecho','Realizar entrenamiento de fuerza con barra'),
+(5,'Pecho Medio','Pecho','Realizar entrenamiento de progresión'),
+(6,'Pecho Bajo','Pecho','Realizar entrenamiento de fuerza con poleas'),
+(7,'Tricep y Bicep','Tricep-bicep','Realizar entrenamiento de fuerza con mancuernas'),
+(8,'Espalda y hombro','Espalda','Realizar entrenamiento de fuerza con mancuernas'),
+(9,'Pecho y hombro','P y H','Aumento de fuerza'),
 (10,'Espalda Baja','Espalda','Tonificar musculos bajos');
 
 -- --------------------------------------------------------
@@ -310,12 +310,12 @@ CREATE TABLE Usuario (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO Usuario VALUES
-(1,'José','Pérez','josperez','jose01@gmail.com','jose013',NULL, 'M','2003-02-01'),
-(2,'Mariana','González','mariangoz','marigonz@gmail.com','coutmariti01',NULL,'F','2001-04-'),
-(3,'Nashun','Wang','nwang','nashunwaang@gmail.com','extrañojapon',NULL,'M','1998-12-31'),
-(4,'Mariano','Vega','marianoovega','vegamariiano@gmail.com','hogema01_',NULL,'M','1994-03-22'),
-(5,'Vanessa','Lanz','enav_152003','enavlanz_01@gmail.com','unicorniofeliz',NULL,'F','2003-09-15'),
-(6,'Héctor','Torres','hector.t24','hectortorres@gmail.com','torresgemelas',NULL,'M','2000-04-24'),
+(1,'José','Pérez','josperez','jose01@gmail.com','jose013',NULL, 'M','2003/02/01'),
+(2,'Mariana','González','mariangoz','marigonz@gmail.com','coutmariti01',NULL,'F','2001/04/02'),
+(3,'Nashun','Wang','nwang','nashunwaang@gmail.com','extrañojapon',NULL,'M','1998/12/31'),
+(4,'Mariano','Vega','marianoovega','vegamariiano@gmail.com','hogema01_',NULL,'M','1994/03/22'),
+(5,'Vanessa','Lanz','enav_152003','enavlanz_01@gmail.com','unicorniofeliz',NULL,'F','2003/09/15'),
+(6,'Héctor','Torres','hector.t24','hectortorres@gmail.com','torresgemelas',NULL,'M','2000/04/24'),
 (7,'Uri','Gopar','uri_gopar','urigopar@gmail.com','gatitosarcoiris01',NULL,'M','1995/03/21'),
 (8,'Sofia','Garcia','sofiii_garcia','sofgarciia22@gmail.com','Cg#1fQm*',NULL,'F','1993/03/21'),
 (9,'Lucas','Rodriguez','roddlucc','rognw012@gmail.com','p9XhKd$r',NULL,'M','1988/07/14'),
@@ -330,7 +330,6 @@ INSERT INTO Usuario VALUES
 (18,'Carla','Martinez','carla_martinez','carla.martinez@example.com','S@1dN6tJ',NULL,'F','1998/04/23'),
 (19,'Tomas','Diaz','tomas_diaz','tomas.diaz@example.com','V8b#4mFp',NULL,'M','2000/10/22'),
 (20,'Lucia','Ortiz','lucia_ortiz','lucia.ortiz@example.com','G#9nH4jK',NULL,'F','1997/09/11');
-
 -- --------------------------------------------------------
 
 --
