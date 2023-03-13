@@ -445,7 +445,7 @@ CREATE TABLE Bitacora (
 -- Table structure for table DietasAlimentos
 --
 
-CREATE TABLE DietasAlimentos (
+CREATE TABLE DietasAlimentos ( -- Actualmente hay 36 alimentos y 10 dietas
   id_dieta int(11) NOT NULL AUTO_INCREMENT,
   id_alimento int(11) NOT NULL AUTO_INCREMENT,
 
@@ -460,16 +460,67 @@ CREATE TABLE DietasAlimentos (
 
 INSERT INTO DietasAlimentos VALUES
 (1,3,4.1),
-(2,10,3),
-(3,4,2.1),
-(4,2,50000),
-(5,9,60),
-(6,3,5),
-(7,20,200),
-(8,5,30),
-(9,6,3),
-(10,9,4),
+(1,5,3244.23),
+(1,23,432.23),
+(1,21,244.2),
+(1,12,34.23),
+(1,36,443.9),
 
+(2,10,3),
+(2,19,3.2),
+(2,28,324.53),
+(2,33,432.3),
+(2,7,43.9),
+
+(3,4,2.1),
+(3,1,534.3),
+(3,11,432.3),
+(3,34,234.22),
+(3,22,2323.3),
+
+(4,2,50000),
+(4,20,534.6),
+(4,32,545.3),
+(4,25,654.23),
+(4,33,452.4),
+(4,14,653.3),
+
+(5,9,234.2),
+(5,2,234),
+(5,33,242.23),
+(5,8,234.2),
+(5,7,242.2),
+
+(6,3,5),
+(6,22,422.43),
+(6,19,4332.4),
+(6,23,4244),
+(6,11,424.2),
+
+(7,20,200),
+(7,21,224.4),
+(7,4,43.2),
+(7,16,543.2),
+(7,29,324),
+
+(8,5,30),
+(8,1,3),
+(8,7,43.2),
+(8,9,234.2),
+(8,35,35.3),
+
+(9,6,3),
+(9,16,23.4),
+(9,26,42.09),
+(9,36,34.2),
+(9,4,23.4),
+(9,14,23.2),
+
+(10,9,4),
+(10,11,23.4),
+(10,28,534.24),
+(10,10,242.2),
+(10,3,23.2);
 
 -- --------------------------------------------------------
 
@@ -616,16 +667,15 @@ INSERT INTO UsuarioRol VALUES
 
 CREATE TABLE ClienteMedicion (
   id_cliente int(11) NOT NULL AUTO_INCREMENT,
-  id_rol int(11) NOT NULL AUTO_INCREMENT,
-
+  id_medicion int(11) NOT NULL AUTO_INCREMENT,
   -- -----------------------------------
 
   fecha date NOT NULL,
   medida float(4,1) DEFAULT NULL,
 
-  PRIMARY KEY(id_usuarioRol),
+  PRIMARY KEY(id_cliente,id_medicion),
   FOREIGN key(id_cliente)REFERENCES Cliente(id_cliente),
-  FOREIGN key(id_rol)REFERENCES Rol(id_rol)
+  FOREIGN key(id_medicion)REFERENCES Medicion(id_medicion)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 
