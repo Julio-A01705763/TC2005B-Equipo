@@ -7,10 +7,9 @@
 -- Server version: 10.6.11-MariaDB
 -- PHP Version: 7.4.19
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+DROP DATABASE IF EXISTS goatech_onyxDB;
+CREATE DATABASE goatech_onyxDB;
+USE goatech_onyxDB;
 --
 -- Database: goatech_onyx
 --
