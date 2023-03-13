@@ -45,7 +45,7 @@ INSERT INTO Alimento VALUES
 (13,'Jamón','Gramo'),
 (14,'Platano','Pieza'),
 (15,'Pan dulce','Pieza'),
-(16,'Azucar','Cucharada'),
+(16,'Azúcar','Cucharada'),
 (17,'Sal','Cucharada'),
 (18,'Crema de maní','Cucharada'),
 (19,'Almendras','Gramo'),
@@ -57,9 +57,18 @@ INSERT INTO Alimento VALUES
 (25,'Uvas','Pieza'),
 (26,'Naranjas','Pieza'),
 (27,'Agua','Mililitros'),
-(28,'Pasta','Gramo')
+(28,'Pasta','Gramo'),
 (29,'Aceite','Cucharada'),
-(30,'Tostadas','Pieza');
+(30,'Tostadas','Pieza'),
+(31,'Leche de vaca','Mililitros'),
+(32,'Leche de soya','Mililitros'),
+(33,'Leche de como','Mililitros'),
+(31,'Jugo de naranja','Mililitros'),
+(32,'Jugo verde','Mililitros'),
+(33,'Jugo de toronja','Mililitros'),
+(34,'Toronja','Pieza'),
+(35,'Aceite de oliva','Cucharada'),
+(36,'Avena','Taza');
 
 -- --------------------------------------------------------
 
@@ -103,7 +112,7 @@ INSERT INTO Ejercicio VALUES
 -- Table structure for table MacroNutrientes
 --
 
-CREATE TABLE MacroNutrientes (
+CREATE TABLE MacroNutrientes ( -- Información cambiante
   id_macro int(11) NOT NULL AUTO_INCREMENT,
   calorias float(7,2) NOT NULL,
   proteinas float(7,2) NOT NULL,
@@ -120,7 +129,10 @@ INSERT INTO MacroNutrientes VALUES
 (4,1200,543.5,435,234),
 (5,2353.23,432.4,343,345.3),
 (6,3000,534.23,433.34,345.23),
-(7,2000,345.23,345.43,234.53);
+(7,2000,345.23,345.43,234.53),
+(8,53462.53,35934.02,59358.02,43850.34),
+(9,0,0,0,0),
+(10,438.34,2485.23,4403.23,434.23);
 
 -- --------------------------------------------------------
 
@@ -128,7 +140,7 @@ INSERT INTO MacroNutrientes VALUES
 -- Table structure for table Medición (Por definir)
 --
 
-CREATE TABLE Medicion (
+CREATE TABLE Medicion ( -- Sólo existen 10 mediciones por el momento
   id_medicion int(11) NOT NULL AUTO_INCREMENT,
   tipo varchar(20) NOT NULL,
 
@@ -153,7 +165,7 @@ INSERT INTO Medicion VALUES
 -- Table structure for table MicroNutrientes
 --
 
-CREATE TABLE MicroNutrientes (
+CREATE TABLE MicroNutrientes ( -- Información cambiante
   id_micro int(11) NOT NULL AUTO_INCREMENT,
   ceniza float(5,1) DEFAULT NULL,
   fibra_total float(5,1) DEFAULT NULL,
@@ -201,7 +213,7 @@ INSERT INTO MicroNutrientes VALUES
 -- Table structure for table Nivel Fisico
 --
 
-CREATE TABLE NivelFisico (
+CREATE TABLE NivelFisico ( -- Sólo existen 4 niveles por el momento
   id_niv int(11) NOT NULL AUTO_INCREMENT,
   nombre varchar(20) NOT NULL,
   descripcion text NOT NULL,
@@ -221,7 +233,7 @@ INSERT INTO NivelFisico VALUES
 -- Table structure for table Objetivo
 --
 
-CREATE TABLE Objetivo (
+CREATE TABLE Objetivo ( -- Sólo existen 3 objetivos por el momento
   id_obj int(11) NOT NULL AUTO_INCREMENT,
   nombre varchar(20) NOT NULL,
   descripcion text NOT NULL,
@@ -239,7 +251,7 @@ INSERT INTO Objetivo VALUES
 -- Table structure for table Rol
 --
 
-CREATE TABLE Rol (
+CREATE TABLE Rol ( -- Sólo existen 2 roles por el momento
   id_rol int(11) NOT NULL AUTO_INCREMENT,
   nombre varchar(20) NOT NULL,
   descripcion text NOT NULL,
@@ -257,7 +269,7 @@ INSERT INTO Rol VALUES
 -- Table structure for table Rutina
 --
 
-CREATE TABLE Rutina (
+CREATE TABLE Rutina ( -- Información cambiante
   id_rutina int(11) NOT NULL AUTO_INCREMENT,
   nombre varchar(25) NOT NULL,
   tiporutina varchar(15) NOT NULL,
@@ -326,7 +338,7 @@ INSERT INTO Usuario VALUES
 -- Table structure for table Dieta
 --
 
-CREATE TABLE Dieta (
+CREATE TABLE Dieta ( -- No se tienen más tipos de dietas
   id_dieta int(11) NOT NULL AUTO_INCREMENT,
   nombre varchar(25) NOT NULL,
   tipo_dieta varchar(15) NOT NULL,
@@ -372,7 +384,7 @@ CREATE TABLE Cliente (
 
   -- ----------------------------------- 
 
-  imc int(11) NOT NULL,
+  imc float(3,1) DEFAULT NULL, -- Atributo calculado, por ende, no se va a calcular aún
 
   PRIMARY KEY(id_cliente),
   
@@ -383,26 +395,26 @@ CREATE TABLE Cliente (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 INSERT INTO Cliente VALUES
-(1,8,5,3,1),
-(2,3,8,2,3),
-(3,7,6,1,4),
-(4,5,3,2,2),
-(5,9,4,2,2),
-(6,10,9,1,3),
-(7,5,1,2,1),
-(8,8,7,3,1),
-(9,7,10,2,3),
-(10,9,6,2,4),
-(11,8,7,2,3),
-(12,2,1,2,1),
-(13,1,9,2,3),
-(14,2,2,2,2),
-(15,10,10,3,4),
-(16,5,5,3,1),
-(17,7,6,2,1),
-(18,4,5,3,4),
-(19,10,5,3,3),
-(20,9,6,2,4);
+(1,8,5,3,1,NULL),
+(2,3,8,2,3,NULL),
+(3,7,6,1,4,NULL),
+(4,5,3,2,2,NULL),
+(5,9,4,2,2,NULL),
+(6,10,9,1,3,NULL),
+(7,5,1,2,1,NULL),
+(8,8,7,3,1,NULL),
+(9,7,10,2,3,NULL),
+(10,9,6,2,4,NULL),
+(11,8,7,2,3,NULL),
+(12,2,1,2,1,NULL),
+(13,1,9,2,3,NULL),
+(14,2,2,2,2,NULL),
+(15,10,10,3,4,NULL),
+(16,5,5,3,1,NULL),
+(17,7,6,2,1,NULL),
+(18,4,5,3,4,NULL),
+(19,10,5,3,3,NULL),
+(20,9,6,2,4,NULL);
 
 -- --------------------------------------------------------
 
