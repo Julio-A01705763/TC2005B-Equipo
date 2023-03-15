@@ -11,7 +11,11 @@ exports.get_bitacora = (request, response, next) => {
 
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
 
-    response.render("bitacora/bitacora", {registros: Bitacora.fetchAll()});
+    Bitacora.fetchAll()
+    .then((rows, fieldData) => {
+        response.render('bitacora/bitacora', {registros: rows[0]})
+    }) 
+    .catch();
 }
 
 exports.post_bitacora = (request,response,next) => {
