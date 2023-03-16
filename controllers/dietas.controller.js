@@ -19,7 +19,7 @@ exports.explorar_dietas_favoritas = (request, response, next) => {
 }
 
 exports.get_nueva = (request, response, next) => {
-    response.render('dietas/nueva')
+    response.render('dietas/agregar_dietas')
 }
 
 exports.post_nueva = (request, response, next) => {

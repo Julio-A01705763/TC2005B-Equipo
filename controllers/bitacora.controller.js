@@ -15,16 +15,18 @@ exports.get_bitacora = (request, response, next) => {
     .then((rows, fieldData) => {
         response.render('bitacora/bitacora', {registros: rows[0]})
     }) 
-    .catch();
+    .catch((error) => {console.log(error)});
 }
 
 exports.post_bitacora = (request,response,next) => {
     const registro = new Bitacora({
-        fecha: request.body.fecha,
         descr_sesion: request.body.descr_sesion,
         nivel_satisf: request.body.nivel_satisf,
         comentarios: request.body.comentarios,
     })
-    registro.save();
-    response.redirect('/home');
+    registro.save()
+    .then(([rows,fieldData]) =>
+        response.redirect('/home')
+    )
+    .catch((error) => {console.log(error)});
 }
