@@ -1,7 +1,7 @@
 const Bitacora = require("../models/bitacora.model");
 
 exports.get_bitacora = (request, response, next) => {
-    let cookies = request.get('Cookie') || '';
+/*    let cookies = request.get('Cookie') || '';
     console.log(cookies);
 
     let consultas = cookies.split(';')[0].split('=')[1] || 0;
@@ -9,7 +9,7 @@ exports.get_bitacora = (request, response, next) => {
 
     consultas++;
 
-    response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
+    response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');*/
 
     Bitacora.fetchAll()
     .then((rows, fieldData) => {

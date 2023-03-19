@@ -3,6 +3,7 @@
 
 <div class = "container">
     <form action="/home" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
     <table class = "table has-text-white-ter has-background-black-ter">
         <thead>
             <tr>
