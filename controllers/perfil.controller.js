@@ -10,7 +10,12 @@ exports.ver_perfil = (request, response, next) => {
         Rutina.fetchAll()
         .then(([rows, fieldData]) => {
             rutinasRows.push(rows[0]);
-            response.render('perfil/perfil', {dieta: dietasRows[0], rutina: rutinasRows[0]})
+            response.render('perfil/perfil', {
+                dieta: dietasRows[0], rutina: rutinasRows[0],
+                isLoggedIn: request.session.isLoggedIn || false,
+                nombre: request.session.nombre || '',
+                rol: request.session.rol,
+            })
         })
         .catch(error => console.log(error));
     })

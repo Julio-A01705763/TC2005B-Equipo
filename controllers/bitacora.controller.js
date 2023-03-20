@@ -13,7 +13,12 @@ exports.get_bitacora = (request, response, next) => {
 
     Bitacora.fetchAll()
     .then((rows, fieldData) => {
-        response.render('bitacora/bitacora', {registros: rows[0]})
+        response.render('bitacora/bitacora', {
+            registros: rows[0],
+            isLoggedIn: request.session.isLoggedIn || false,
+            nombre: request.session.nombre || '',
+            rol: request.session.rol,
+        })
     }) 
     .catch((error) => {console.log(error)});
 }

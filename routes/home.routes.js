@@ -12,6 +12,8 @@ router.get('/registrarse', homeController.registrarse);
 
 router.post('/registrarse', homeController.post_registrarse);
 
+router.get('/cerrar-sesion', homeController.cerrar_sesion)
+
 router.get('/', homeController.inicio);
 
 module.exports = router;

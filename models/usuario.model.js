@@ -33,4 +33,14 @@ module.exports = class Usuario {
         `, [username]);
     }
 
+    static fetchRol(username){
+        return db.execute(`
+            SELECT r.nombre
+            FROM usuario u, rol r, usuariorol ur
+            WHERE u.id_usuario = ur.id_usuario
+            AND ur.id_rol = r.id_rol
+            AND u.nombre_usuario = ?
+        `, [username]);
+    }
+
 }

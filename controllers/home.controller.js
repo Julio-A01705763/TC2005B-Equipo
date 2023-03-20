@@ -1,10 +1,14 @@
 const Usuario = require('../models/usuario.model');
 const bcrypt = require('bcryptjs');
+const { response } = require('express');
 
 exports.inicio = (request, response, next) => {
-    request.session.destroy();
     response.clearCookie("consultas");
-    response.render('home/inicio');
+    response.render('home/inicio', {
+        isLoggedIn: request.session.isLoggedIn,
+        nombre: request.session.nombre || '',
+        rol: request.session.rol || '',
+    });
 }
 
 exports.iniciar_sesion = (request,response,next) => {
@@ -29,9 +33,14 @@ exports.post_iniciar_sesion = (request, response, next) => {
             .then((doMatch) => {
                 if(doMatch) {
                     request.session.isLoggedIn = true;
-                    request.session.id = rows[0].id_usuario;
-                    return request.session.save(err => {
-                        response.redirect('/home');
+                    request.session.nombre = rows[0].nombre;
+                    Usuario.fetchRol(rows[0].nombre_usuario)
+                    .then(([consultaRol, fieldData]) => 
+                    {
+                        request.session.rol = consultaRol[0].nombre;
+                        return request.session.save(err => {
+                            response.redirect('/home');
+                        });
                     });
                     
                 } else {
@@ -56,7 +65,8 @@ exports.post_iniciar_sesion = (request, response, next) => {
 
 exports.registrarse = (request, response, next) => {
     response.render('home/registrarse', {isLoggedIn: request.session.isLoggedIn || false,
-    id:request.session.id
+    nombre: request.session.nombre || '',
+    rol: request.session.rol || '',
     });
 };
 
@@ -75,3 +85,9 @@ exports.post_registrarse = (request, response, next) => {
         response.redirect('/iniciar-sesion');
     }).catch((error) => {console.log(error)});
 };
+
+exports.cerrar_sesion = (request, response, next) => {
+    request.session.destroy(() => {
+        response.redirect('/'); 
+    });
+}
